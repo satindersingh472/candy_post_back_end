@@ -11,6 +11,7 @@ def all_candies():
     results_json = get_display_results('call all_candies()',[])
     return results_json
 
+# post a new candy into a database
 @app.post('/api/candy')
 def add_candy():
     invalid = verify_endpoints_info(request.json,['name','description','image_url'])
@@ -19,6 +20,8 @@ def add_candy():
     results_json = get_display_results('call add_candy(?,?,?)',
     [request.json.get('name'),request.json.get('description'),request.json.get('image_url')])
     return results_json
+
+# delete an existing candy with the help of a id
 
 @app.delete('/api/candy')
 def delete_candy():
