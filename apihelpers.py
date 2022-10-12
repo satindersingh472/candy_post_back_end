@@ -13,7 +13,7 @@ def get_display_results(statement,args_list):
     if(type(results) == list):
         if(len(results) == 0):
             return 'No Results matched your input'
-        return make_response(json.dumps(results, default=str), 200)
+        return results
     elif(type(results) == str):
         if(results.startswith('Duplicate entry')):
             return 'Duplicate data already exists, please change values and try again'
