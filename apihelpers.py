@@ -15,7 +15,7 @@ def get_display_results(statement,args_list):
             return 'No Results matched your input'
         return make_response(json.dumps(results, default=str), 200)
     elif(type(results) == str):
-        if(results.startswith('Duplicate entry)):
+        if(results.startswith('Duplicate entry')):
             return 'Duplicate data already exists, please change values and try again'
         return make_response(json.dumps(results, default=str), 400)
     else:
