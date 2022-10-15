@@ -57,7 +57,7 @@ def delete_candy():
 if(dbcreds.production_mode == True):
     print('Running in PRODUCTION MODE')
     import bjoern #type: ignore
-    bjoern.run(app,'0.0.0.0',5100)
+    bjoern.run(app,'0.0.0.0',5200)
 else:
     from flask_cors import CORS
     CORS(app)
